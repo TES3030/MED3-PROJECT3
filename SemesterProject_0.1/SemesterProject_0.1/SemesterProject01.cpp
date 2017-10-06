@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-
+//COMMIT BY JUHA
 
 int main()
 {
