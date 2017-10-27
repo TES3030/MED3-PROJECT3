@@ -5,3 +5,8 @@ SemesterProject_0.1/.vs/SemesterProject_0.1/v15/Browse.VC.db
 SemesterProject_0.1/.vs/SemesterProject_0.1/v15/Browse.VC.db
 *.db
 SemesterProject_0.1/.vs/SemesterProject_0.1/v15/Browse.VC.db
+*.prefs
+*.info
+*.bin
+Unity UI/Library/metadata/00/00000000000000005000000000000000
+Unity UI/Temp/UnityLockfile
