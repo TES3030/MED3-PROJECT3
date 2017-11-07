@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class Fading : MonoBehaviour {
 
     public Image image;
@@ -10,28 +11,32 @@ public class Fading : MonoBehaviour {
     public float fadeSpeed = 0.3f;
     public int drawDepth = -1000;
 
-    private float alpha = 1.0f;
-    private float fadeDir = -1;
+    //private float alpha = 1.0f;
+    //private float fadeDir = -1;
 
     private bool shouldBlink = false;
     private Color NumberColor;
+    bool correctAnswer;
 
 
     // Use this for initialization
     void Start()
         
     {
-        bool correctAnswer;
-        int i=5;
+        
+        int i=11;
         correctAnswer = (i>10);
         if (correctAnswer==true) {// correct answer
             ChangeColor(Color.green);// turn green
+            shouldBlink = true;
         }
 
         else {//wrong answer
             ChangeColor(Color.red);//turn red
+            shouldBlink = true;
         }
         correctAnswer = false;
+        //shouldBlink = false;
     }
 
     void ChangeColor(Color color)
@@ -45,9 +50,12 @@ public class Fading : MonoBehaviour {
        
         if (shouldBlink)
         {
+            float param, param2;
+            param = 1;
+            param2 = 1;
             //Fade in
             Color tmpColor = image.color;
-            tmpColor.a = Mathf.Sin(Time.time);
+            tmpColor.a = Mathf.Sin((Time.time)*5);
 
             image.color = tmpColor;
         }
