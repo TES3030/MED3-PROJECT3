@@ -22,6 +22,8 @@ public class Fading : MonoBehaviour {
         
     {
         bool correctAnswer;
+        int i=5;
+        correctAnswer = (i>10);
         if (correctAnswer==true) {// correct answer
             ChangeColor(Color.green);// turn green
         }
@@ -45,9 +47,7 @@ public class Fading : MonoBehaviour {
         {
             //Fade in
             Color tmpColor = image.color;
-
-            tmpColor.a += fadeSpeed * Time.deltaTime;
-            tmpColor.a -= fadeSpeed * Time.deltaTime;
+            tmpColor.a = Mathf.Sin(Time.time);
 
             image.color = tmpColor;
         }
@@ -59,12 +59,9 @@ public class Fading : MonoBehaviour {
 
 
 
-    void _ ()
-    {
-        
-    }
+  
 
-    void fadeOut()
+    /*void fadeOut()
     {
         fadeDir = 1;
     }
@@ -77,7 +74,7 @@ public class Fading : MonoBehaviour {
     void startFade() {
         alpha = 1;
         fadeIn();
-    }
+    }*/
 
 
 }
