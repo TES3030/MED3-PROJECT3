@@ -50,12 +50,13 @@ public class Fading : MonoBehaviour {
        
         if (shouldBlink)
         {
-            float param, param2;
-            param = 1;
-            param2 = 1;
+           
             //Fade in
             Color tmpColor = image.color;
-            tmpColor.a = Mathf.Sin((Time.time)*5);
+            tmpColor.a =(float)1 + Mathf.Sin((Time.time)*5);
+            print(tmpColor.a);
+
+            tmpColor.a = (float)(tmpColor.a / 2.0) + (float)0.5;
 
             image.color = tmpColor;
         }
