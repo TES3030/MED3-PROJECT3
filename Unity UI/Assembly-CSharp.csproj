@@ -46,8 +46,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\RectTransformRotation.cs" />
      <Compile Include="Assets\Scripts\Addition.cs" />
      <Compile Include="Assets\Scripts\Fading.cs" />
+     <Compile Include="Assets\Scripts\RectTransformRotation.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>F:/Programmer/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
